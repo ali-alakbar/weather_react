@@ -1,0 +1,148 @@
+// =================== Start Global Variables ===================
+$mainWhite: #fff;
+$mainBlack: #000;
+$mainGreen: #44f1a6;
+
+@mixin btn {
+  border: unset;
+  background-color: $mainGreen;
+  color: $mainBlack;
+  font-weight: 600;
+  width: 7rem;
+  height: 2rem;
+  margin-top: 1em;
+  cursor: pointer;
+}
+@mixin inputs {
+  width: 100%;
+  border: unset;
+  opacity: 0.5;
+  margin: 0.5em 0;
+  padding: 0.5em 0;
+  background: #fff0;
+  color: $mainWhite;
+  border-bottom: solid 1px $mainWhite;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+}
+// =================== End Global Variables ===================
+
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: PT Mono, monospace;
+}
+
+// ============ Start Stylling The Form Box ============
+#root {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+main {
+  display: flex;
+  width: 100%;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  .welcomeText {
+    color: $mainGreen;
+    position: relative;
+    z-index: 3;
+    font-size: 1.7em;
+    font-weight: 600;
+    right: 3em;
+    .Typewriter {
+      display: inline;
+    }
+  }
+  .videoContainer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    #myVideo {
+      display: inline-block;
+      vertical-align: baseline;
+      object-fit: fill;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .container {
+    z-index: 2;
+    position: relative;
+    width: 25em;
+    height: 30em;
+    display: flex;
+    flex-direction: column;
+    padding: 2.5em;
+
+    form {
+      button {
+        @include btn;
+      }
+      .input {
+        @include inputs;
+        &::-webkit-focus-inner {
+          border: 0;
+        }
+        &:focus {
+          opacity: 1;
+          border-bottom: solid 1px $mainWhite;
+        }
+      }
+    }
+    // ============ End Stylling The Form Box ============
+    // ============ Start The Result Section ============
+    .result {
+      margin-top: 60px;
+      div {
+        display: flex;
+        justify-content: space-between;
+        color: $mainWhite;
+        border-bottom: solid 1px #ffffffb3;
+        margin: 1em 0;
+        padding-bottom: 1.4em;
+        span {
+          opacity: 0.9;
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+  // ============ End The Result Section ============
+}
+
+/* Start Screen Responsive */
+
+/* Medium  */
+@media (max-width: 992px) {
+  main {
+    .welcomeText {
+      right: 0;
+      font-size: 1em;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+/* Small  */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+}
+/* End Screen Responsive */

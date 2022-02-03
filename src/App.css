@@ -1,0 +1,171 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: PT Mono, monospace;
+}
+
+#root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .welcomeText {
+  color: #44f1a6;
+  position: relative;
+  z-index: 3;
+  font-size: 1.7em;
+  font-weight: 600;
+  right: 3em;
+}
+
+main .welcomeText .Typewriter {
+  display: inline;
+}
+
+main .videoContainer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+
+main .videoContainer #myVideo {
+  display: inline-block;
+  vertical-align: baseline;
+  -o-object-fit: fill;
+     object-fit: fill;
+  width: 100%;
+  height: 100%;
+}
+
+main .container {
+  z-index: 2;
+  position: relative;
+  width: 25em;
+  height: 30em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2.5em;
+}
+
+main .container form button {
+  border: unset;
+  background-color: #44f1a6;
+  color: #000;
+  font-weight: 600;
+  width: 7rem;
+  height: 2rem;
+  margin-top: 1em;
+  cursor: pointer;
+}
+
+main .container form .input {
+  width: 100%;
+  border: unset;
+  opacity: 0.5;
+  margin: 0.5em 0;
+  padding: 0.5em 0;
+  background: #fff0;
+  color: #fff;
+  border-bottom: solid 1px #fff;
+  font-size: 16px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+}
+
+main .container form .input::-webkit-focus-inner {
+  border: 0;
+}
+
+main .container form .input:focus {
+  opacity: 1;
+  border-bottom: solid 1px #fff;
+}
+
+main .container .result {
+  margin-top: 60px;
+}
+
+main .container .result div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #fff;
+  border-bottom: solid 1px #ffffffb3;
+  margin: 1em 0;
+  padding-bottom: 1.4em;
+}
+
+main .container .result div span {
+  opacity: 0.9;
+}
+
+main .container .result div:last-child {
+  border-bottom: none;
+}
+
+/* Start Screen Responsive */
+/* Medium  */
+@media (max-width: 992px) {
+  main .welcomeText {
+    right: 0;
+    font-size: 1em;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Small  */
+@media (max-width: 768px) {
+  main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+/* End Screen Responsive */
+/*# sourceMappingURL=App.css.map */
