@@ -25,7 +25,7 @@ class App extends Component{
         const city = e.target.elements.city.value
 
         if (city.trim().length !==0 ) {
-            axios(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=0067d86bf6bb4db36fc3b5cda752cca0`)
+            axios(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=e36ed364400282e43250b6c4c0274d44`)
             .then(
                 res => 
                 this.setState({
