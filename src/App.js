@@ -23,6 +23,7 @@ class App extends Component{
     getWeather(e){
         e.preventDefault()
         const city = e.target.elements.city.value
+        alert("Disable the protection of the website to get the weather data!")
 
         if (city.trim().length !==0 ) {
             axios(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=e36ed364400282e43250b6c4c0274d44`)
@@ -53,7 +54,6 @@ class App extends Component{
                     <video  autoplay="" loop="True" muted="" id='myVideo' src={video}></video>
                 </div>
                 <div className='container'>
-                    {alert("Disable the protection of the website to get the weather data!")}
                     <CityInput getWeather = { this.getWeather } />
                 
                     <ResultWeather 
