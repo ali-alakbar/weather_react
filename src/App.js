@@ -53,6 +53,7 @@ class App extends Component{
                     <video  autoplay="" loop="True" muted="" id='myVideo' src={video}></video>
                 </div>
                 <div className='container'>
+                    {alert("Disable the protection of the website to get the weather data!")}
                     <CityInput getWeather = { this.getWeather } />
                 
                     <ResultWeather 
